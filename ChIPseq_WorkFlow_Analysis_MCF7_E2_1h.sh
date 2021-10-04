@@ -78,32 +78,6 @@ for i in $Results/sambamba/*.bam ; do
 done
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #4.2 MACS2 callPeak
 echo "****MACS2_Peakcalling in MCF7 celline****"
 macs2 callpeak -t $Align/SRR2176971.bam -c $Align/SRR2176981.bam \
