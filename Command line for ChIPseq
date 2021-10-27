@@ -1,0 +1,24 @@
+# Command-line arguments for ChIP-seq anlaysis
+trimmomatic SE -threads 16 -summary R1.trimmomatic.log R1.fq R1.trimmed.fq ILLUMINACLIP:adapters/TruSeq-SE-combined.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:20 MINLEN:36
+
+bwa mem -t 6 -M mm10 R1.trimmed.fq | samtools view -bT mm10.fa -q 1 -F 4 -F 256 > R1.unsorted.bam
+
+samtools sort -o R1.sorted.bam R1.unsorted.bam
+samtools index R1.sorted.bam
+
+picard MarkDuplicates I=R1.sorted.bam O=R1.dedup.sorted.bam ASSUME_SORTED=true REMOVE_DUPLICATES=true METRICS_FILE=R1.dedup.metrics VALIDATION_STRINGENCY=LENIENT PROGRAM_RECORD_ID=’null’
+samtools index R1.dedup.sorted.bam
+
+computeGCBias -b R1.dedup.sorted.bam --effectiveGenomeSize 2494787188 -g mm10.2bit -bl blacklist.bed -p 20 -l 240 -o R1.dedup.gcbias.freq --biasPlot R1.dedup.gcbias.png
+
+correctGCBias -b R1.dedup.sorted.bam --effectiveGenomeSize 2494787188 -g mm10.2bit -p 20 -freq R1.dedup.gcbias.freq -o R1.dedup.sorted.gc.corrected.bam
+
+samtools index R1.dedup.sorted.gc.corrected.bam
+
+macs2 callpeak -t R1.chip.dedup.sorted.gc.corrected.bam -c R1.control.dedup.sorted.gc.corrected.bam -f BAM -g 2494787188 --outdir macs -n R1.chip
+
+bamCompare -b1 R1.chip.dedup.sorted.gc.corrected.bam -b2 R1.input.dedup.sorted.gc.corrected.bam --scaleFactorsMethod None --effectiveGenomeSize 2494787188 -p 10 --operation log2 --normalizeUsing RPKM -bl blacklist.bed -o R1.chip.input.log2.bw
+
+computeMatrix reference-point -a 2000 -b 2000 --referencePoint center --smartLabels -R peaks.bed -S R1.chip.input.log2.bw -bs 5 -p 48
+
+meme-chip -o R1.chip.meme -neg random.ATAC.fasta -order 2 -meme-p 12 -meme-nmotifs 40 -psp-gen R1.chip.peaks.fasta
