@@ -1,0 +1,193 @@
+{
+    "references" :
+    {
+      "CanFam3.1" :
+      {
+        "version" : ["CanFam3.1_ensembl84_ERCC", "CanFam3.1_ensembl84"],
+        "genome" : "/Data/References/Genomes/Canis_familiaris/CanFam3.1_ensembl84/Canis_familiaris.CanFam3.1.dna.toplevel.fa",
+        "GTF" :
+        {
+          "CanFam3.1_ensembl84_ERCC" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/Canis_familiaris.CanFam3.1.84_ERCC.gtf",
+          "CanFam3.1_ensembl84" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/Canis_familiaris.CanFam3.1.84.gtf"
+        },
+        "kallisto" :
+        {
+          "CanFam3.1_ensembl84_ERCC" : "/Data/References/Transcriptomes/Canis_familiaris/CanFam3.1_ensembl84/Canis_familiaris.CanFam3.1.all_ERCC.ki",
+          "CanFam3.1_ensembl84" : "/Data/References/Transcriptomes/Canis_familiaris/CanFam3.1_ensembl84/Canis_familiaris.CanFam3.1.all.ki"
+        },
+        "STAR" :
+        {
+          "CanFam3.1_ensembl84_ERCC" : "/Data/References/Transcriptomes/Canis_familiaris/CanFam3.1_ensembl84/STAR_Index_ERCC",
+          "CanFam3.1_ensembl84" : "/Data/References/Transcriptomes/Canis_familiaris/CanFam3.1_ensembl84/STAR_Index"
+        },
+        "bowtie2" :
+        {
+          "CanFam3.1_ensembl84_ERCC" : "/Data/References/Genomes/Canis_familiaris/CanFam3.1_ensembl84/CanFam3.1",
+          "CanFam3.1_ensembl84" : "/Data/References/Genomes/Canis_familiaris/CanFam3.1_ensembl84/CanFam3.1"
+        }
+      }
+    },
+    "samples" :
+    {
+      "RNA-Seq" :
+      {
+        "NB501086_0067_RDomaschenz_JCSMR_RNASeq" :
+        {
+          "MDCK_wt_rep1" : ["Renae9_S9_R1_001.fastq.gz", "Renae9_S9_R2_001.fastq.gz"],
+          "MDCK_wt_rep2": ["Renae10_S10_R1_001.fastq.gz", "Renae10_S10_R2_001.fastq.gz"],
+          "MDCK_shZ_rep1" : ["Renae8_S8_R1_001.fastq.gz", "Renae8_S8_R2_001.fastq.gz"],
+          "MDCK_shZ_rep2" : ["Renae7_S7_R1_001.fastq.gz", "Renae7_S7_R2_001.fastq.gz"],
+          "MDCK_TGFb_rep1" : ["Renae11_S11_R1_001.fastq.gz", "Renae11_S11_R2_001.fastq.gz"],
+          "MDCK_TGFb_rep2" : ["Renae12_S12_R1_001.fastq.gz", "Renae12_S12_R2_001.fastq.gz"]
+        },
+        "NB501086_0082_RDomaschenz_JCSMR_mRNAseq" :
+        {
+          "MDCKD6_1" : ["MDCKD6_1_S1_R1_001.fastq.gz", "MDCKD6_1_S1_R2_001.fastq.gz"],
+          "MDCKD6_2" : ["MDCKD6_2_S2_R1_001.fastq.gz", "MDCKD6_2_S2_R2_001.fastq.gz"],
+          "MDCKD6_3" : ["MDCKD6_3_S3_R1_001.fastq.gz", "MDCKD6_3_S3_R2_001.fastq.gz"],
+          "MDCKshZD6_1" : ["MDCKshZD6_1_S7_R1_001.fastq.gz", "MDCKshZD6_1_S7_R2_001.fastq.gz"],
+          "MDCKshZD6_2" : ["MDCKshZD6_2_S8_R1_001.fastq.gz", "MDCKshZD6_2_S8_R2_001.fastq.gz"],
+          "MDCKshZD6_3" : ["MDCKshZD6_3_S9_R1_001.fastq.gz", "MDCKshZD6_3_S9_R2_001.fastq.gz"],
+          "MDCKTGFbD6_1" : ["MDCKTGFbD6_1_S4_R1_001.fastq.gz", "MDCKTGFbD6_1_S4_R2_001.fastq.gz"],
+          "MDCKTGFbD6_2" : ["MDCKTGFbD6_2_S5_R1_001.fastq.gz", "MDCKTGFbD6_2_S5_R2_001.fastq.gz"],
+          "MDCKTGFbD6_3" : ["MDCKTGFbD6_3_S6_R1_001.fastq.gz","MDCKTGFbD6_3_S6_R2_001.fastq.gz"]
+        }
+      },
+      "ChIP-Seq" :
+      {
+        "NB501086_0011_MNekrasov_MDCK_JCSMR_ChIPseq" :
+        {
+          "H2AZ-TGFb-rep1" : ["H2AZ-TGFb-rep1_S3_R1_001.fastq.gz", "H2AZ-TGFb-rep1_S3_R2_001.fastq.gz"],
+          "H2AZ-TGFb-rep2" : ["H2AZ-TGFb-rep2_S4_R1_001.fastq.gz", "H2AZ-TGFb-rep2_S4_R2_001.fastq.gz"],
+          "H2AZ-WT-rep1" : ["H2AZ-WT-rep1_S1_R1_001.fastq.gz", "H2AZ-WT-rep1_S1_R2_001.fastq.gz"],
+          "H2AZ-WT-rep2" : ["H2AZ-WT-rep2_S2_R1_001.fastq.gz", "H2AZ-WT-rep2_S2_R2_001.fastq.gz"],
+          "Input-TGFb-rep1" : ["Input-TGFb-rep1_S7_R1_001.fastq.gz", "Input-TGFb-rep1_S7_R2_001.fastq.gz"],
+          "Input-TGFb-rep2" : ["Input-TGFb-rep2_S8_R1_001.fastq.gz", "Input-TGFb-rep2_S8_R2_001.fastq.gz"],
+          "Input-WT-rep1" : ["Input-WT-rep1_S5_R1_001.fastq.gz", "Input-WT-rep1_S5_R2_001.fastq.gz"],
+          "Input-WT-rep2" : ["Input-WT-rep2_S6_R1_001.fastq.gz", "Input-WT-rep2_S6_R2_001.fastq.gz"]
+        },
+        "replicates" :
+        {
+          "H2AZ-TGFb" : ["H2AZ-TGFb-rep1", "H2AZ-TGFb-rep2"],
+          "H2AZ-WT" : ["H2AZ-WT-rep1", "H2AZ-WT-rep2"],
+          "Input-TGFb" : ["Input-TGFb-rep1", "Input-TGFb-rep2"],
+          "Input-WT" : ["Input-WT-rep1", "Input-WT-rep1"]
+        }
+      }
+    },
+    "program_parameters" :
+    {
+      "cutadapt" :
+      {
+        "trim_params": "-a AGATCGGAAGAGC -A AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGTAGATCTCGGTGGTCGCCGTATCATT --minimum-length=30"
+      },
+      "kallisto" :
+      {
+        "bootstraps" : "100"
+      },
+      "STAR" :
+      {
+        "runThreadN" : "4"
+      },
+      "bt2_params" :
+      {
+          "max_insert" : ["1000"],
+          "threads" : ["7"],
+          "platform" : ["Illumina"]
+      },
+      "bt2_params_unmapped_reads" :
+      {
+          "max_insert" : ["1000000"],
+          "threads" : ["7"],
+          "platform" : ["Illumina"]
+      },
+      "deepTools" :
+      {
+        "threads" : "8",
+        "SES_sample_length" : ["1000"],
+        "SES_numer_of_samples" : ["10000000.0"],
+        "ignoreForNormalization" : ["MT X"],
+        "binSize" : ["10000"],
+        "regionFiles" :
+        {
+          "CanFam3.1_ensembl84_ERCC" :
+          {
+            "allGenes" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/allGenes.bed",
+            "TanEMTup" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/Tan_et_al_EMT_up_genes.bed",
+            "TanEMTdown" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/Tan_et_al_EMT_down_genes.bed",
+            "qPCRGenesUp" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/qPCR_genes_up.bed",
+            "qPCRGenesDown" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/qPCR_genes_down.bed",
+            "random100up" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/random100up.bed",
+            "random100down" : "/Data/References/Annotations/Canis_familiaris/CanFam3.1_ensembl84/random100down.bed"
+          }
+        },
+        "bamCoverage" :
+        {
+          "MNase" :
+          {
+            "--binSize" : "1",
+            "--smoothLength" : "10"
+          },
+          "normal" :
+          {
+            "--centerReads" : " ",
+            "--binSize" : "10",
+            "--smoothLength" : "30"
+          }
+        },
+        "bamCompare" :
+        {
+          "MNase" :
+          {
+            "--binSize" : "1",
+            "--smoothLength" : "30"
+          },
+          "normal" :
+          {
+            "--centerReads" : " ",
+            "--binSize" : "10",
+            "--smoothLength" : "30"
+          }
+        },
+        "computeMatrix" :
+        {
+          "scale-regions" :
+          {
+            "--upstream" : "1500",
+            "--downstream" : "1500",
+            "--regionBodyLength" : "5000",
+            "--unscaled5prime" : "200",
+            "--unscaled3prime" : "200"
+          },
+          "reference-point" :
+          {
+            "--upstream" : "1500",
+            "--downstream" : "1500",
+            "--referencePoint" : ""
+          }
+        }
+      },
+      "picard_tools" :
+      {
+        "CollectInsertSizeMetrics" :
+        {
+            "minimum_perc" : "0.1"
+        }
+      },
+      "macs2" :
+      {
+        "gsize" : "2.0e9"
+      }
+    },
+    "trim_dir" : "trimmed_data",
+    "processed_dir" : "processed_data",
+    "aligned_dir" : "aligned_data",
+    "reports_dir" : "reports",
+    "temp_dir" : "/temp_data",
+    "alignment_quality" : "10",
+    "raw_dir" : "fastq",
+    "deepTools_dir" : "/miniconda3/envs/py27/bin",
+    "HTSeq_dir" : "/miniconda3/envs/py27/bin",
+    "cutadapt_dir" : "/miniconda3/envs/snakemake/bin",
+    "picard" : "/bin/picard.jar"
+}
